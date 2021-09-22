@@ -8,13 +8,14 @@ uber_path = "uber-raw-data-apr14.csv"
 ny_path = "ny-trips-data.csv"
 
 image = st.image('https://upload.wikimedia.org/wikipedia/commons/c/cc/Uber_logo_2018.png')
-def modified_function(df):
-    time_ = time.time()
-    res = function(df)
-    time_ = time.time()-time_
-    with open(f"{function.__name__}_exec_time.txt","w") as f:
-        f.write(f"{time_}")
-    return res
+def myDecorator(function):
+    def modified_function(df):
+        time_ = time.time()
+        res = function(df)
+        time_ = time.time()-time_
+        with open(f"{function.__name__}_exec_time.txt","w") as f:
+            f.write(f"{time_}")
+        return res
     return modified_function
 
 
