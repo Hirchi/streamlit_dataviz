@@ -1,11 +1,7 @@
 freeglut3-dev
 libgtk2.0-dev
-sphinx>=1.8.1,!=2.0.0
-colorspacious
-ipython
-ipywidgets
-numpydoc>=0.8
-sphinxcontrib-svg2pdfconverter>=1.1.0
-sphinx-gallery>=0.7
-sphinx-copybutton
-scipy
+numpy 
+matplotlib
+ipython==2.2.0
+numpy==1.8.2
+matplotlib==1.4.2
